@@ -1,0 +1,281 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,UTF8]{ctexart}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{郑中阳 } % Your Name
+\newcommand{\nameen}{Zhongyang Zheng} % Your Name in Englishs
+\newcommand{\course}{软件工程师本科} % Your Course
+\newcommand{\phone}{+86 18601702818} % Your Phone Number
+\newcommand{\emaila}{zhongyang.zheng@uqconnect.edu.au} %Email 1
+\newcommand{\emailb}{www.linkedin.com/in/jeffzzy} %Email 2
+\newcommand{\nationality}{中国} % Your Nationality
+\newcommand{\gender}{男} % Your Gender
+\newcommand{\dob}{4/10/1999} % Your DoB
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2cm,clip]{zzy.jpg}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name \nameen} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ \phone}\\
+  \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {\emailb}}\\
+  {\raisebox{0.0\height}{专业: \course}} & {\raisebox{0.0\height}{国籍: \nationality}} \\
+  {\raisebox{0.0\height}{生日: \dob}} & {\raisebox{0.0\height}{性别: \gender}} \\
+  
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{教育}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {上海市市北中学}{}
+      {高中生}{2015 - 2017}
+    \resumeSubheading
+      {IES大学}{}
+      {预科}{2017 - 2018}
+    \resumeSubheading
+      {昆士兰大学}{CGPA: 3.76}
+      {软件工程师本科}{预期毕业 6月 2024}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{实习经历}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {昆士兰大学}{2018}
+      {后端开发, 底盘设计}{布里斯班}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {在一个团队中开发一辆智能汽车。开发一个能使其在行驶中保持平衡的底盘。运行一个Arduino板。如果它检测到自己前面有障碍物，它就会在车后放下一面旗子。}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      {昆士兰大学}{2020}
+      {志愿者}{布里斯班}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {带领新生参观校园。}
+    
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{项目}}
+\resumeSubHeadingListStart
+     \resumeProject
+      {吃豆人} %Project Name
+      {在团队中开发一款吃豆人游戏。} %Project Name, Location Name
+      {2019} %Event Dates
+
+      \resumeItemListStart
+        \item {工具 \& 科技: AVR ATmega324A 微控制器, 传感器, LED}
+        \item {职位: 后端开发\\
+        用AVR ATmega324A微控制器运行该程序，接收来自几个来源的输入，并将输出显示在一个串行终端上。实现的功能有：闪屏、吃豆人的移动和吃豆子等。}
+    \resumeItemListEnd
+    \vspace{-2mm}
+     \resumeProject
+      {Fmart} %Project Name
+      {在一个团队中开发一个网上购物应用程序。该应用程序对滞销水果很有帮助。} %Project Name, Location Name
+      {2021} %Event Dates
+
+      \resumeItemListStart
+        \item {工具 \& 科技: Adobe XD, React Native}
+        \item {职位: 用户界面设计, 前端，市场调研，演讲 \\
+        定期与前端开发人员紧密合作，以保证设计目标的实现。设计重视可见性、自由、一致性、识别性和灵活性的界面。}
+    \resumeItemListEnd
+    \vspace{-2mm}
+     \resumeProject
+      {智能枕头} %Project Name
+      {在团队中培养一个智能枕头。该产品对维持异地恋关系很有帮助。} %Project Name, Location Name
+      {2022} %Event Dates
+
+      \resumeItemListStart
+        \item {工具 \& 科技: Arduino, 传感器, LED, 枕头}
+        \item {职位: 项目管理, 前端，市场调研，演讲\\
+        制定一个严格的项目时间表。从问卷调查和访谈中收集许多有意义的结果。设计PPT的一部分，解释该小组的目标、设计过程和未来计划。}
+    \resumeItemListEnd
+    \vspace{-2mm}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{专业技能}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{语言}{: 普通话(母语), 英语(IELTS: 6.0), 日语(N2)} \\
+     \textbf{开发工具}{: Python, HTML, CSS and JavaScript} \\
+     \textbf{框架}{: 设计框架: 针对位置依赖性的设计} \\
+     \textbf{Github}{: https://github.com/Joker1581} \\
+     \textbf{软技术}{: 编程, UI设计} \\
+     \textbf{期望岗位}{: 前端开发, UI设计师} \\
+    }}
+ \end{itemize}
+ \vspace{-5mm}
+ 
+
+%-----------Achievements-----------------
+
+\section{\textbf{成就}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{新知杯三等级} % Award
+    {初中奥数比赛} % Event
+    {2014} %Event Year
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+%-----------Hobbies-----------------
+%\section{\textbf{Hobbies}}
+%\vspace{-0.4mm}
+%\resumeSubHeadingListStart
+%\item Billiards, darts, swimming, tennis, singing
+%\resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
